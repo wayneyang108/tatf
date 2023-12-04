@@ -1,0 +1,153 @@
+%
+\documentclass[openany,oneside]{amsbook}
+
+\usepackage[all]{xy}
+\usepackage[T1]{fontenc}
+\usepackage{xstring}
+\usepackage{xparse}
+\usepackage{CJKutf8}
+\usepackage{xcolor}
+\definecolor{brightmaroon}{rgb}{0.76, 0.13, 0.28}
+\usepackage[linktocpage=true,colorlinks=true,hyperindex,citecolor=blue,linkcolor=brightmaroon]{hyperref}
+\usepackage[left=1.25in,right=1.25in,top=0.75in,bottom=0.75in]{geometry}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{mathpazo}
+\linespread{1.05}
+
+\usepackage[nobottomtitles]{titlesec}
+\usepackage{marginnote}
+\usepackage{enumerate}
+\usepackage{longtable}
+\usepackage{aurical}
+\usepackage{microtype}
+
+
+\newtheoremstyle{ega-env-style}%
+  {}{}{\rmfamily}{}{\bfseries}{.}{ }{\thmnote{(#3)}}%
+
+\newtheoremstyle{ega-thm-env-style}%
+  {}{}{\itshape}{}{\bfseries}{. --- }{ }{\thmname{#1}\thmnote{ (#3)}}%
+
+\newtheoremstyle{ega-defn-env-style}%
+  {}{}{\rmfamily}{}{\bfseries}{. --- }{ }{\thmname{#1}\thmnote{ (#3)}}%
+
+\theoremstyle{ega-env-style}
+\newtheorem*{env}{---}
+
+\theoremstyle{ega-thm-env-style}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{proposition}{Proposition}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{corollary}{Corollary}
+
+\theoremstyle{ega-defn-env-style}
+\newtheorem*{definition}{Definition}
+\newtheorem*{example}{Example}
+\newtheorem*{examples}{Examples}
+\newtheorem*{remark}{Remark}
+\newtheorem*{remarks}{Remarks}
+\newtheorem*{notation}{Notation}
+
+\makeatletter
+\def\l@subsection{\@tocline{2}{0pt}{2.5pc}{2.2pc}{}}
+\def\section{\@startsection{section}{1}%
+  \z@{.7\linespacing\@plus\linespacing}{.5\linespacing}%
+  {\normalfont\bfseries\Large\scshape\centering}}
+\renewcommand{\@seccntformat}[1]{%
+  \ifnum\pdfstrcmp{#1}{section}=0\textsection\fi%
+  \csname the#1\endcsname.~}
+\makeatother
+
+
+
+\def\mathcal{\mathscr}
+\input{preamble-base}
+
+\def\shHom{\sh{H}\textup{\kern-2.2pt{\Fontauri\slshape om}}}   % sheaf Hom
+\def\shProj{\sh{P}\textup{\kern-2.2pt{\Fontauri\slshape roj}}} % sheaf Proj
+\def\shExt{\sh{E}\textup{\kern-2.2pt{\Fontauri\slshape xt}}}   % sheaf Ext
+\def\shGr{\sh{G}\textup{\kern-2.2pt{\Fontauri\slshape r}}}     % sheaf Gr
+\def\shDer{\sh{D}\,\textup{\kern-2.2pt{\Fontauri\slshape er}}} % sheaf Der
+\def\shDiff{\sh{D}\,\textup{\kern-2.2pt{\Fontauri\slshape if{}f}}\,} % sheaf Diff
+\def\shHomcont{\sh{H}\textup{\kern-2.2pt{\Fontauri\slshape om.\,cont}}}   % sheaf Hom.cont
+\def\shAut{\sh{A}\textup{\kern-2.2pt{\Fontauri\slshape ut}}}   % sheaf Aut
+
+\def\unsure#1{#1 {\color{red}(?)}}
+\def\completelyunsure{{\color{red}(???)}}
+
+%\newcommand{\oldpage}[2][--]{{\marginnote{\normalfont{\textbf{#1}~|~#2}}}\ignorespaces}
+\newcommand{\oldpage}[1][--]{{\marginnote{\normalfont{\textbf{#1}}}}\ignorespaces}
+\def\sectionbreak{\begin{center}***\end{center}}
+
+\NewDocumentCommand{\sref}{o m o}{%
+  \IfNoValueTF{#1}%
+    {\IfNoValueTF{#3}%
+      {\hyperref[#2]{\normalfont{(\StrBehind{#2}{.})}}}%
+      {\hyperref[#2]{\normalfont{(\StrBehind{#2}{.},~{#3})}}}}%
+    {\IfNoValueTF{#3}%
+      {\hyperref[#2]{\normalfont{(\textbf{#1},~\StrBehind{#2}{.})}}}%
+      {\hyperref[#2]{\normalfont{(\textbf{#1},~\StrBehind{#2}{.},~{#3})}}}}%
+}
+
+\newcommand{\erratum}[2][]{{#2}\marginpar{\footnotesize\textbf{Err}\textsubscript{#1}}}
+
+\newcommand{\eref}[1]{\hyperref[#1]{\normalfont{(\StrBehind{#1}{.})}}}
+
+\newcommand{\ZeroRoman}[1]{\ifcase\value{#1}\relax 0\else\Roman{#1}\fi}
+\renewcommand{\thechapter}{\ZeroRoman{chapter}}
+\begin{document}
+
+\begin{titlepage}
+\pagestyle{empty}
+\setcounter{page}{1}
+\centerline{\LARGE\bfseries Topologie alg\'ebrique et th\'eorie des faiseaux}
+\vskip0.5in
+\noindent
+\centerline{Roger Godement}
+\centerline{Actualit\'es scienetifies et industrilles 1252}
+\centerline{Herman \'editeurs des sciences et des art}
+\vskip0.5in
+\noindent
+\centerline{\bfseries Translators}
+\centerline{Wayne Yang}
+\end{titlepage}
+\setcounter{tocdepth}{2}
+\tableofcontents
+
+\phantomsection
+\label{section:Trasnote}
+\chapter*{Translators' Notes}
+
+\unsure{Any translations about which we are not entirely sure will be marked with a}.
+
+\sectionbreak
+
+Whenever a note is made by the translators, it will be prefaced by ``[Trans.]''.
+
+\sectionbreak
+
+Along the margins we have provided the page numbers corresponding to the original text.
+
+\chapter*{Preface}
+
+\phantomsection
+\label{section:preface}
+
+\oldpage[I]
+
+\chapter{Homological Algebra}
+
+\phantomsection
+\label{section:tatf1}
+\input{tatf1/tatf1-1}
+
+\chapter{Sheaf Theory}
+
+\phantomsection
+\label{section:tatf2}
+\input{tatf2/tatf2-1}
+
+\bibliography{the}
+\bibliographystyle{amsalpha}
+\end{document}
