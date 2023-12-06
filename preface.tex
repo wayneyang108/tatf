@@ -1,0 +1,125 @@
+\oldpage[I]
+Of all the idea that circulate in the mathematical circles, 
+that of the public a reference work devoted to the sheaf theory is certainly one of the least original: 
+Most specialists in this theory intended to do so at one time or another, 
+and we know several publications which deal with the problem
+-- in general renoeotyped as if thery were subversive leaflets -- 
+the most famous rightly being owned to ~Henri ~Cartan.
+
+Yet we sought in vain to a complete expose, giving all the proves of all the theorems, in a whole.
+While the technic of sheaf pervade the most diverse branches of Mathematics, 
+such a situation can no longer be tolerated by the technicians: 
+this is why a specialist of functional analysis today presents a complete, 
+i.e. less incompete than the others, the sheaf theory -- with a vengeance.
+
+It is obvious that a book would be completely useless if it addressed only to specialists of the sheaf theory, or in the same time, 
+according to the extra-topologic application of this theory, which assummed the reader were completed informed the classical technic of algebraic topology. 
+Therefore we have sought write a book that suppose \emph{no} knowledge of algebraic topology, 
+and consequently preceded the presentation of the sheaf thoery with a chapter of the homological algebra, 
+which we hope, it will be useful to a certain categories of readers.
+
+In addition to the usual consideration of the exact sequences, functors, complexes, etc ..., 
+this first chapter treat essentially three important questions: 
+the theory of spectral sequences \sref[I]{section:I.4}, 
+the functors $\Ext$ and $\Tor$ \sref[I]{section:I.5}, 
+and the simplicial complex \sref[I]{section:I.3}.
+Our exposition is obvious shorter and less complete than the one we have found in the recent book of 
+~H. ~Cartan and ~S. ~Eilenberg, which concerns the spectral sequences of the $\Ext$ and $\Tor$. 
+
+\oldpage[II]
+As for the ``simplicial complex'', they are complexes of chains (or cochains) in which we have ``face operator'' to allow formally perform the classic simplicial calculus; 
+a situation that is found not only in the classical thoery of polyhedrons, but also in singular homology, in \v{C}ech cohomology, and in the sheaf theory. 
+As ~Kan's recent work also seems to prove that these complexes constitute the natural domain of validatiy of the complete homotopy theory, 
+we can claim that the general notion of simplicial complex (mainly due to ~Eilenberg and ~Zilber) is called to play an essential role in algebraic topology.
+
+In particular, we will find in the paragraph 3 an almost complete presentation of the product theory (Cartesian product and cup-product), 
+an exposition whose originality is probably to be printed. 
+We don't think we should insert in this paragraph a statement of ~Steenrod operator; 
+It will be found in the second volume of this book, when we have at our disposal the necessary technics (cohomology of groups, group operater space, singular homology).
+
+The sheaf theory itself occupies the second half of this book.
+For readers who are aware of the previously published presentations. 
+We will give some indications on the methods we use, since they differ quite significantly from the methods already known, 
+and generally go further for the remainder.
+
+After two general paragraphes on the sheaves of sets and the sheaves of modules, we address in paragraph 3 the central problem of the sheaf theory: 
+the ``extension'' or the ``lift'' of sections of a sheaf. The essential notion of this point of view, because of its simplicity and usefulness, seems to be that of \emph{flabby} sheaf: 
+a sheaf $\sh{F}$ on a space $X$ is flabby if all section of $\sh{F}$ above an \emph{open} set of $X$ can be extended to the whole $X$. 
+All sheaf $\sh{F}$ can be extended to a flabby sheaf (For example, the sheaf of germs of not necessary continuous sections in $\sh{F}$); 
+
+Moreover, if we have an exact sequence
+\[
+    0\rightarrow \sh{F}^0 \rightarrow \sh{F}^1 \rightarrow \ldots
+\]
+of flabby sheaf of Abelian groups, then the \emph{sections} of this sheaves above any open sets still formed an exact sequence. 
+In the paracompact space, it is important to also have the weaker notion of \emph{soft} sheaf: 
+a sheaf $\sh{F}$ is soft if all section of $\sh{F}$ above a \emph{closed} set can be extended to the ambiant space. 
+This notion seems to have advantage to substitute the \emph{thin} sheaf, which played an essential role in the previous theory, as will be seen experimentally. 
+On the paracompact space, if we have an exact sequence of soft sheaves of Abelian groups, the sections of these sheaves above any closed sets still formed an exact sequence.
+
+\oldpage[III]
+The paragraph 4 defines, for all space $X$, the same non-separated, and all sheaf $\sh{A}$ of Abelian groups on $X$, the group $\HH^n(X;\sh{A})$ and 
+proof their essential properties: we have first of all
+\[
+    \HH^0(X;\sh{A}) = \Gamma({\sh{A}})
+\]
+group of global sections of $\sh{A}$; all have exact sequence
+\[
+    0\rightarrow \sh{A'} \rightarrow \sh{A} \rightarrow \sh{A''} \rightarrow 0
+\]
+is associated to a exact sequence of cohomology
+\[
+    \ldots\rightarrow \HH^n(X;\sh{A'}) \rightarrow \HH^n(X;\sh{A}) \rightarrow \HH^n(X;\sh{A''}) \rightarrow \HH^{n+1}(X;\sh{A'}) \ldots
+\]
+finally, we have
+\[
+    \HH^0(X;\sh{A}) = 0\ for\ n\geq 1
+\]
+if $\sh{A}$ is flabby (or, when $X$ is paracompact, if $\sh{A}$ is soft). 
+The possibility of defintion, \emph{without any hypothesis of} $X$, of groups of cohomology possess these properties, 
+have been proved first by ~A. ~Grothendick in 1955, using the fact of all sheaf can be extended into a \emph{injective} sheaf, in the sense of homological algebra. 
+As the research of ~Grothendick on this subject will be published soon, we preferred to use, instead of injective sheaf, 
+the flabby sheaf [which obviously are specially adapted to the study of functor $\sh{A}\rightarrow \Gamma({A})$]; 
+it turns out that we can construct, in a canonical fashon, a \emph{flabby resolution}
+\[
+    0\rightarrow \sh{A} \rightarrow C^0(\sh{A}) \rightarrow C^1(\sh{A}) \rightarrow \ldots
+\]
+of all sheaf $\sh{A}$, which is also a ``exact'' functor with respect to the $\sh{A}$; posing
+\[
+    \cx{\CC}(X;\sh{A}) = \Gamma(\cx{C}(X;\sh{A})),\ 
+    \HH^n(X;\sh{A}) = \HH^n(\cx{C}(X;\sh{A})),
+\]
+then we obtain, all the way to elementary results, the three fundemental properties of groups of cohomology.
+
+The \sref[I]{I.4} also continue the proof, based on the usage of spectral sequence, the celebrated ``fundemental theorems''; 
+In particular, all resolution
+\[
+    0\rightarrow \sh{A} \rightarrow \sh{L}^0 \rightarrow \sh{L}^1 \rightarrow \ldots
+\]
+of a sheaf $\sh{A}$ gives rise to the canonical homormorphisms
+\[
+    \HH^n(\Gamma(\cx{\sh{L}})) \rightarrow \HH^n(X;\sh{A})
+\]
+which are bijective if the $\sh{L}^p$ are flabby (or soft, when $X$ is paracompact), 
+this obviously shows that in principle it was unneccessary, to choose a ``canonical'' flabby resolution of $\sh{A}$ to define the group $\HH^n(X;\sh{A})$.
+
+\oldpage[IV]
+Finally, we expose in detail the exact sequence of cohomology associated to a closed subspace, and 
+various extra questions 
+(relations between the cohomology of a set and its neighborhoods, cohomology value in an inductive limit of sheaves, spectral sequence of fiber spaces, cohomology dimension).
+
+The \sref[I]{I.5} studies the relations between the groups $\HH^n(X;\sh{A})$ and the groups $\CHH^n(X;\sh{A})$ obtained by the method of \v{C}ech 
+(which, we know it, does not give satisfying result outside of the paracompact space, or special categories of sheaves). 
+We will show at first that all cover $U$ of $X$ that is open, is closed and locally finite, defines a \emph{resolution} $\cx{C}(U;\sh{A})$ of all sheaf $\sh{A}$ on $X$; 
+It results to canonical homormorphisms $\CHH^n(X;\sh{A}) \rightarrow \HH^n(X;\sh{A})$ which comes from the residue of a spectral sequence. 
+
+At the limit, we find a spectral sequence connecting the \v{C}ech cohomology to the ``good'' cohomology. 
+We deduce that there is an isomorphism
+\[
+    \CHH^n(X;\sh{A}) = \HH^n(X;\sh{A})
+\]
+for all sheaf if $X$ is paracompact; 
+and if $X$ is not paracompact, it is still the case for a given sheaf if there exists ``sufficent'' open sets in $X$ such that, for all finite intersection $U$ of all open sets, we have
+\[
+    \CHH^n(U;\sh{A}) = 0 \ for\ n\geq 1
+\]
