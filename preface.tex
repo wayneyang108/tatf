@@ -96,7 +96,7 @@ In particular, all resolution
 \[
     0\rightarrow \sh{A} \rightarrow \sh{L}^0 \rightarrow \sh{L}^1 \rightarrow \ldots
 \]
-of a sheaf $\sh{A}$ gives rise to the canonical homormorphisms
+of a sheaf $\sh{A}$ gives rise to the canonical homomorphisms
 \[
     \HH^n(\Gamma(\cx{\sh{L}})) \rightarrow \HH^n(X;\sh{A})
 \]
@@ -111,7 +111,7 @@ various extra questions
 The \sref[I]{I.5} studies the relations between the groups $\HH^n(X;\sh{A})$ and the groups $\CHH^n(X;\sh{A})$ obtained by the method of \v{C}ech 
 (which, we know it, does not give satisfying result outside of the paracompact space, or special categories of sheaves). 
 We will show at first that all cover $U$ of $X$ that is open, is closed and locally finite, defines a \emph{resolution} $\cx{C}(U;\sh{A})$ of all sheaf $\sh{A}$ on $X$; 
-It results to canonical homormorphisms $\CHH^n(X;\sh{A}) \rightarrow \HH^n(X;\sh{A})$ which comes from the residue of a spectral sequence. 
+It results to canonical homomorphisms $\CHH^n(X;\sh{A}) \rightarrow \HH^n(X;\sh{A})$ which comes from the residue of a spectral sequence. 
 
 At the limit, we find a spectral sequence connecting the \v{C}ech cohomology to the ``good'' cohomology. 
 We deduce that there is an isomorphism
@@ -123,3 +123,62 @@ and if $X$ is not paracompact, it is still the case for a given sheaf if there e
 \[
     \CHH^n(U;\sh{A}) = 0 \ for\ n\geq 1
 \]
+The last result, due to ~H. ~Cartan, enable us to show that, for the coherent algebraic sheaves studied by ~Serre, the \v{C}ech cohomology coincides with the ``good'' cohomology.
+On the other hand, we have proved without hypothesis on the space $X$, the famous result according to ~Leray, giving a cover $\mathfrak{M} = (M_l)$ of $X$ such that we always have 
+\[
+    \HH^n(M_{l_0})\cup \ldots \cup M_{l_p};\sh{A}) = 0\ for\ n\geq 1
+\]
+the homomorphisms
+\[
+    \HH^n(\mathfrak{M};\sh{A}) = \HH^n(X;\sh{A})
+\]
+are bijective provided that $\mathfrak{M}$ is \emph{open}, or as well \emph{closed and locally finite}. 
+
+Unfortunately, we could not find a proof simultaneously applied to these two cases: 
+In the open case, it has to study the double complex $\cx{\CC}(\mathfrak{M}; \cx{C}(X;\sh{A}))$, 
+and in the closed case, the double complex $\cx{\CC}(X; \cx{C}(\mathfrak{M};\sh{A}))$, or $\cx{C}(\mathfrak{M}; \sh{A})$ denoted the resolution of $\sh{A}$ defined by $\mathfrak{M}$.
+
+The \sref[I]{section:I.6} extended the sheaf theory with the notions of Cartesian product and cup product.
+Given the sheaf $\sh{A}$ and $\sh{B}$ on the space $X$ and $Y$, 
+we observe trivially that the tensor product of canonical resolution of $\sh{A}$ and $\sh{B}$ is a resolution of tensor product $\sh{A}\otimes\sh{B}$ 
+(the notation $\otimes$ indicating that the result is a sheaf with base $X\times Y$); 
+whence without any hypothesis on $X$ and $Y$, the mapping 
+\[
+    \HH^p(X;\sh{A})\times \HH^q(Y;\sh{B})\rightarrow \HH^{p+q}(X\times Y; \sh{A}\otimes \sh{B})
+\]
+
+\oldpage[V]
+which posing all the properties that we are expecting to a Cartesian product in cohomology. 
+When $X = Y$, we find out for the similar reason, or as well the utilization of Cartesian product and diagonal mapping, 
+the cup products 
+\[
+    \HH^p(X;\sh{A})\times \HH^q(X;\sh{B})\rightarrow \HH^{p+q}(X; \sh{A}\otimes \sh{B})
+\]
+Indicated by an important circumstance elsewhere; there exists, for \emph{all} sheaf $\sh{A}$ on a space $X$, a flabby resolution 
+\[
+    0\rightarrow \sh{A} \rightarrow \sh{F}^0(X;\sh{A}) \rightarrow \sh{F}^1(X;\sh{A}) \rightarrow \ldots
+\]
+that is an exact functor in $\sh{A}$, \emph{and thus the differential result of a semi-simplicial structure} 
+(i.e. the operator of ``face'' and ``degeneracy'' formally analogus to those of the semi-simplicial theory from ~Eilenberg--~MacLane--~Zilber).
+
+If we use the resolution to define the groups of cohomology, 
+we note that the ``explicit'' formula that give the cup-product in the classical simplicial theory, saying the formula 
+\[
+    f\cup g(x_0,\ldots,x_{p+q}) = f(x_0,\ldots,x_p)\otimes g(x_p,\ldots,x_{p+q})
+\]
+also given in the sheaf theory.
+\footnote[1]{It is as well extended to the same in \v{C}ech cohomology; Unfortunately, the method of \v{C}ech isn't satisfied on the paracompact space.}
+This remark is not only interesting, but also purely pedagogically, 
+showing that the multiplicative theory of sheaves is not a particular case of the general thoery concerning the ``simplicial'' theory;
+It showed that all resting exclusive notion on the existence of a simplicial structure extending automatically to the sheaf theory; 
+In particular, it is now clear that \emph{the ~Steenrod operator can be defined in the sheaf theory} because suppose, at most, 
+a simplicial structure and a diagonal mapping. 
+This question, as we said above, will be exposed in detail in the second volume of this book.
+
+Finally, the \sref{section:II.7} contains summary information on the injective sheaf, the derived functor, 
+and the speactral sequence of $\Ext$ that is indispensible in geometry algebra.
+\footnote[2]{We find a lot of complete results (notably for the ``coherent'' sheaves of modules) in a article of ~Grothendick 
+(On some aspect of homological algebra, to be released in ~Tohoku ~Math. ~Journal).}
+
+
+
